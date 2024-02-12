@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-01-15T12:32:44.312Z",
+    "end": "2024-01-15T12:32:51.672Z",
+    "duration": 7360,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d630dc7a-467a-4f12-b5f3-061fc25fa6a2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\API_Testing\\API-test.cy.ts",
+      "file": "cypress\\e2e\\API_Testing\\API-test.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a66c10b6-bb8a-4087-b431-903e2419b775",
+          "title": "scehma validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should fetch and display correct graph data",
+              "fullTitle": "scehma validation should fetch and display correct graph data",
+              "timedOut": null,
+              "duration": 7314,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('GET', 'https://devapp.sentra.world/#/calculus/monitor/net-zero-motivation/pathways/0')\n    .its('status')\n    .should('equal', 200);",
+              "err": {},
+              "uuid": "0b7d93b3-9411-4f16-832f-43c948637350",
+              "parentUUID": "a66c10b6-bb8a-4087-b431-903e2419b775",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0b7d93b3-9411-4f16-832f-43c948637350"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7314,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-01-15T10:16:48.377Z",
+    "end": "2024-01-15T10:17:27.914Z",
+    "duration": 39537,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1e884076-ac3f-4cd2-8c93-f93bf53cedae",
+      "title": "",
+      "fullFile": "cypress\\e2e\\new\\Monitor_Mitigate.cy.ts",
+      "file": "cypress\\e2e\\new\\Monitor_Mitigate.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "869e6c5b-bd7a-4523-a188-4182a3e69c4e",
+          "title": "centraworld_calcus",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login",
+              "fullTitle": "centraworld_calcus login",
+              "timedOut": null,
+              "duration": 39449,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://tabreed.sentra.world/');\nconst Username = 'vikas.upadhyay@sentra.world';\nconst Password = 'SentraWorld@2023';\ncy.get('input[placeholder=\"Username\"]').type('vikas.upadhyay@sentra.world');\ncy.get('input[placeholder=\"Password\"]').type('SentraWorld@2023');\ncy.get('.open-model > p > :nth-child(2)').should('be.visible').click();\ncy.get(':nth-child(64)').scrollIntoView({ duration: 2000 });\ncy.wait(2000);\ncy.get('#scrollableLongContentModal > .modal-dialog > .modal-content > [style=\"display: contents;\"] > .model-header > .btn').click();\ncy.get('.open-model > p > :nth-child(1)').should('be.visible').click();\ncy.get('#scrollableLongContentModalp > .modal-dialog > .modal-content > [style=\"display: contents;\"] > .model-body > .policy-font > :nth-child(50)').scrollIntoView({ duration: 2000 });\ncy.wait(2000);\ncy.get('#scrollableLongContentModalp > .modal-dialog > .modal-content > [style=\"display: contents;\"] > .model-header > .btn').click();\nif (cy.get(\"a[href='#']\").should('be.visible').click()) {\n    cy.log('click on contact us');\n}\ncy.get('.px-4 > .ng-star-inserted').click();\nif (Username === 'vikas.upadhyay@sentra.world' &&\n    Password === 'SentraWorld@2023') {\n    cy.wait(6000);\n    cy.get('#toast-container > .ng-trigger').click();\n    cy.get('#toast-container > .ng-trigger').then(function (Login) {\n        cy.log(Login.text());\n    });\n}\nelse {\n    cy.wait(4000);\n    cy.get('#toast-container > .ng-trigger').then(function (Unauthorized) {\n        cy.log(Unauthorized.text());\n    });\n}\ncy.get('.sidebar-nav > :nth-child(3) > .nav-link')\n    .should('be.visible')\n    .click();",
+              "err": {},
+              "uuid": "1bbd0f70-03e0-4fcb-971e-0e947d879cdb",
+              "parentUUID": "869e6c5b-bd7a-4523-a188-4182a3e69c4e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1bbd0f70-03e0-4fcb-971e-0e947d879cdb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 39449,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

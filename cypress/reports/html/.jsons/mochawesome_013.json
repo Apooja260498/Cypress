@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-01-30T05:18:31.034Z",
+    "end": "2024-01-30T05:18:45.227Z",
+    "duration": 14193,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b9a89625-8263-42f9-8529-78f47b991bfa",
+      "title": "",
+      "fullFile": "cypress\\e2e\\frameworkdemo\\settings-Profile.cy.ts",
+      "file": "cypress\\e2e\\frameworkdemo\\settings-Profile.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d99bc89e-f85a-4483-9f52-05f70030229e",
+          "title": "monitorBaseline",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logintest",
+              "fullTitle": "monitorBaseline logintest",
+              "timedOut": null,
+              "duration": 14104,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('URL').then(function (data) {\n    cy.visit(data.url);\n    var ln = new _Locator_cy__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\n    ln.setLoginPage(data.username, data.Password);\n    cy.get(data.settingUrl).should('contain', 'Settings').click();\n    cy.get('app-profile.ng-star-inserted .nav-horizontal-scroll').should('contain.text', 'Company overview');\n    // cy.get('#companyLogo').attachFile({filepath:'Logo.png'});\n    if (cy.get('#company').clear() &&\n        cy.get('#industryCluster').clear() &&\n        cy.get('#BusinessLine').clear()) {\n        cy.get('.invalid-feedback.ng-star-inserted').should('contain.text', 'This field is required');\n        cy.get(\"button[type='submit']\").should('not.be.enabled');\n    }\n    if (cy.get('#company').type('SteelCo') &&\n        cy.get('#industryCluster').type('Metals & Mining') &&\n        cy.get('#BusinessLine').type('Furniture')) {\n        cy.get(\"button[type='submit']\").should('be.enabled').click();\n        cy.get('div#toast-container.toast-top-right.toast-container')\n            .should('be.visible')\n            .and('contain.text', 'Success!');\n    }\n    cy.get('.btn-outline-success').should('be.enabled');\n});",
+              "err": {},
+              "uuid": "dc64cf4f-10bf-455d-b5d8-e8793f228481",
+              "parentUUID": "d99bc89e-f85a-4483-9f52-05f70030229e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dc64cf4f-10bf-455d-b5d8-e8793f228481"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14104,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-01-15T10:12:00.146Z",
+    "end": "2024-01-15T10:13:48.083Z",
+    "duration": 107937,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "747d26e1-63f5-42ec-9168-85fc253d5ce9",
+      "title": "",
+      "fullFile": "cypress\\e2e\\frameworkdemo\\monitor-baseline.cy.ts",
+      "file": "cypress\\e2e\\frameworkdemo\\monitor-baseline.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "452d25fe-661c-4464-a2ee-518c6bde355c",
+          "title": "monitorBaseline",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logintest",
+              "fullTitle": "monitorBaseline logintest",
+              "timedOut": null,
+              "duration": 107837,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\frameworkdemo\\\\monitor-baseline.cy.ts\\\\monitorBaseline -- logintest (failed).png\"\n    ]\n  ]\n}",
+              "code": "cy.fixture('URL').then(function (data) {\n    cy.visit(data.url);\n    var ln = new _Locator_cy__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\n    ln.setLoginPage(data.username, data.Password);\n    cy.wait(2000);\n    cy.get(data.BaselineUrl).should('contain', 'Baseline').click();\n    cy.get('app-baseline.ng-star-inserted > :nth-child(1) > .sub-navigation > .table-tabs > .row > .col > .nav-horizontal-scroll > .nav-horizontal-scroll-inner > :nth-child(1) > .nav-link').should('contain', 'Corporate carbon footprint');\n    cy.pause();\n    ln.setSites();\n    cy.get('.mb-4 > :nth-child(1) > .rounded-4 > .card-body').should('exist');\n    cy.get('.mb-4 > :nth-child(1) > .rounded-4 > .card-body').should('exist');\n    cy.get('.mb-4 > :nth-child(1) > .rounded-4 > .card-body').should('exist');\n    ln.setCalender();\n    cy.get(':nth-child(1) > bs-calendar-layout > .bs-datepicker-head > bs-datepicker-navigation-view > .previous > span').click();\n    if (cy\n        .get(':nth-child(1) > bs-calendar-layout > .bs-datepicker-body > .months > tbody > :nth-child(1) > :nth-child(2) > span')\n        .click() &&\n        cy\n            .get(':nth-child(1) > bs-calendar-layout > .bs-datepicker-body > .months > tbody > :nth-child(1) > :nth-child(3) > span')\n            .click()) {\n        cy.get('.mb-4 > :nth-child(1) > .rounded-4 > .card-body').should('exist');\n        cy.get('.mb-4 > :nth-child(1) > .rounded-4 > .card-body').should('exist');\n        cy.get('.mb-4 > :nth-child(1) > .rounded-4 > .card-body').should('exist');\n    }\n    if (cy.get('[for=\"intesity\"]').click()) {\n        cy.get('#breakdownBenchMarkChart').should('be.visible');\n    }\n    if (cy.get('[for=\"absolute\"]').click()) {\n        cy.get('#breakdownBenchMarkChart').should('be.visible');\n    }\n    cy.get('app-baseline.ng-star-inserted > :nth-child(1) > .sub-navigation > .table-tabs > .row > .col > .nav-horizontal-scroll > .nav-horizontal-scroll-inner > :nth-child(2) > .nav-link')\n        .should('be.visible')\n        .click();\n    cy.get(':nth-child(1) > .rounded-4 > .card-body').should('exist');\n    cy.get(':nth-child(2) > .rounded-4 > .card-body').should('exist');\n    cy.pause();\n    if (cy\n        .get('select')\n        .scrollIntoView({ duration: 2000 })\n        .should('exist')\n        .select('Rebar')) {\n        cy.get('.product-based-wrapper > .card > .card-body').should('be.visible');\n    }\n});\ncy.get('.sub-navigation-inner > .sub-navigation > .table-tabs > .row > .col > .nav-horizontal-scroll > .nav-horizontal-scroll-inner > :nth-child(2) > .nav-link').click();\nif (cy\n    .get(':nth-child(1) > .filter-box > .custom-form-control')\n    .select('Customer 1')) {\n    cy.get(':nth-child(2) > .filter-box > .custom-form-control').should('be.enabled');\n}\nif (cy.get(':nth-child(2) > .filter-box > .custom-form-control').select('1')) {\n    cy.get(':nth-child(3) > .filter-box > .custom-form-control')\n        .should('be.enabled')\n        .select('GHG');\n}\ncy.get('.card-body > :nth-child(1) > [style=\"\"]').should('be.visible');\ncy.get('app-baseline.ng-star-inserted > :nth-child(1) > .sub-navigation > .table-tabs > .row > .col > .nav-horizontal-scroll > .nav-horizontal-scroll-inner > :nth-child(3) > .nav-link')\n    .should('be.visible')\n    .click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 8000ms: Expected to find element: `app-baseline.ng-star-inserted > :nth-child(1) > .sub-navigation > .table-tabs > .row > .col > .nav-horizontal-scroll > .nav-horizontal-scroll-inner > :nth-child(1) > .nav-link`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 8000ms: Expected to find element: `app-baseline.ng-star-inserted > :nth-child(1) > .sub-navigation > .table-tabs > .row > .col > .nav-horizontal-scroll > .nav-horizontal-scroll-inner > :nth-child(1) > .nav-link`, but never found it.\n    at Context.eval (webpack://angular-centraworld-calcus/./cypress/e2e/frameworkdemo/monitor-baseline.cy.ts:11:0)",
+                "diff": null
+              },
+              "uuid": "49279a2d-1d6a-4dc0-ad98-e962f1bb928a",
+              "parentUUID": "452d25fe-661c-4464-a2ee-518c6bde355c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "49279a2d-1d6a-4dc0-ad98-e962f1bb928a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 107837,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

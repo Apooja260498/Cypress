@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-01-15T11:27:03.464Z",
+    "end": "2024-01-15T11:27:18.927Z",
+    "duration": 15463,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b1839d9a-2e85-4acd-9544-395f7511e980",
+      "title": "",
+      "fullFile": "cypress\\e2e\\frameworkdemo\\monitor-netzerojourney.cy.ts",
+      "file": "cypress\\e2e\\frameworkdemo\\monitor-netzerojourney.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "46fea0ff-8a0e-4213-bdd3-193dfc460a26",
+          "title": "monitorNetzeroJourney",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logintest",
+              "fullTitle": "monitorNetzeroJourney logintest",
+              "timedOut": null,
+              "duration": 15373,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('URL').then(function (data) {\n    cy.visit(data.url);\n    var ln = new _Locator_cy__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\n    ln.setLoginPage(data.username, data.Password);\n    cy.get(data.NetzerojourneyUrl).should('be.exist').click();\n    cy.get('div.nav-horizontal-scroll').should('contain', 'Pathways');\n});",
+              "err": {},
+              "uuid": "fa1bce33-f1c6-44fc-bc07-20b821829acd",
+              "parentUUID": "46fea0ff-8a0e-4213-bdd3-193dfc460a26",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fa1bce33-f1c6-44fc-bc07-20b821829acd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15373,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

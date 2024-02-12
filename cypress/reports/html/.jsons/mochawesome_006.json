@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-01-15T10:16:02.492Z",
+    "end": "2024-01-15T10:16:46.509Z",
+    "duration": 44017,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ccd02860-0c3a-45e0-8b70-cb293d5e52da",
+      "title": "",
+      "fullFile": "cypress\\e2e\\new\\Monitor_Baseline.cy.ts",
+      "file": "cypress\\e2e\\new\\Monitor_Baseline.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0247491e-4c7c-40f9-9a70-445688018d48",
+          "title": "centraworld_calcus",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login",
+              "fullTitle": "centraworld_calcus login",
+              "timedOut": null,
+              "duration": 43875,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\new\\\\Monitor_Baseline.cy.ts\\\\centraworld_calcus -- login (failed).png\"\n    ]\n  ]\n}",
+              "code": "cy.visit('https://tabreed.sentra.world/');\nconst Username = 'vikas.upadhyay@sentra.world';\nconst Password = 'SentraWorld@2023';\ncy.get('input[placeholder=\"Username\"]').type('vikas.upadhyay@sentra.world');\ncy.get('input[placeholder=\"Password\"]').type('SentraWorld@2023');\ncy.get('.open-model > p > :nth-child(2)').should('be.visible').click();\ncy.get(':nth-child(64)').scrollIntoView({ duration: 2000 });\ncy.wait(2000);\ncy.get('#scrollableLongContentModal > .modal-dialog > .modal-content > [style=\"display: contents;\"] > .model-header > .btn').click();\ncy.get('.open-model > p > :nth-child(1)').should('be.visible').click();\ncy.get('#scrollableLongContentModalp > .modal-dialog > .modal-content > [style=\"display: contents;\"] > .model-body > .policy-font > :nth-child(50)').scrollIntoView({ duration: 2000 });\ncy.wait(2000);\ncy.get('#scrollableLongContentModalp > .modal-dialog > .modal-content > [style=\"display: contents;\"] > .model-header > .btn').click();\nif (cy.get(\"a[href='#']\").should('be.visible').click()) {\n    cy.log('click on contact us');\n}\ncy.get('.px-4 > .ng-star-inserted').click();\nif (Username === 'vikas.upadhyay@sentra.world' &&\n    Password === 'SentraWorld@2023') {\n    cy.wait(6000);\n    cy.get('#toast-container > .ng-trigger').click();\n    cy.get('#toast-container > .ng-trigger').then(function (Login) {\n        cy.log(Login.text());\n    });\n}\nelse {\n    cy.wait(4000);\n    cy.get('#toast-container > .ng-trigger').then(function (Unauthorized) {\n        cy.log(Unauthorized.text());\n    });\n}\ncy.get('.pe-2 > .form-control').click();\ncy.get('[href=\"#/calculus/monitor/baseline\"]').should('be.visible').click();\ncy.get('app-baseline.ng-star-inserted > :nth-child(1) > .sub-navigation > .table-tabs > .row > .col > .nav-horizontal-scroll').then(function (sub_tabs) {\n    cy.log(sub_tabs.text());\n});\ncy.get('.sub-navigation-inner c-nav-item a.nav-link').then(function (sub_navigation) {\n    cy.log(sub_navigation.text());\n});\ncy.get('.sub-navigation-inner c-nav-item a.nav-link').each(($element) => {\n    // Click each element\n    cy.wrap($element).click({ multiple: true });\n    cy.get('.col-lg-8 > .sec-title').should('be.visible');\n    cy.get(':nth-child(1) > .rounded-4 > .card-body > .sec-title').should('be.visible');\n    cy.get(':nth-child(2) > .rounded-4 > .card-body > .sec-title').should('be.visible');\n});\nif (cy.get('[for=\"absolute\"]').should('be.visible').click()) {\n    cy.get('.font-12').then(function (absolute_total_emission) {\n        cy.log(absolute_total_emission.text());\n    });\n}\nif (cy.get('[for=\"intesity\"]').should('be.visible').click()) {\n    cy.get('.col-lg-8 > .font-12').then(function (intensity_total_emission) {\n        cy.log(intensity_total_emission.text());\n    });\n}\ncy.get('.mb-4 > :nth-child(1) > .rounded-4 > .card-body').should('be.visible');\ncy.get('.mb-4 > :nth-child(1) > .rounded-4 > .card-body').should('be.visible');\ncy.get(':nth-child(1) > .rounded-4 > .card-body > .sec-title').then(function (emission_breakdown_scope) {\n    cy.log(emission_breakdown_scope.text());\n});\ncy.get('.chart-side-colors > :nth-child(1)').should('contains.text', 'Scope 1');\ncy.get('.chart-side-colors > :nth-child(2)').should('contains.text', 'Scope 2');\ncy.get('.chart-side-colors > :nth-child(3)').should('contains.text', 'Scope 3');\ncy.get('.chart-side-colors > :nth-child(4)').should('contains.text', 'Scope');\ncy.get('.chart-side-colors > :nth-child(5)').should('contains.text', 'Category');\ncy.get('.chart-side-colors > :nth-child(6)').should('contains.text', 'Driver');\ncy.get(':nth-child(2) > .rounded-4 > .card-body > .sec-title').then(function (Absolute_emission) {\n    cy.log(Absolute_emission.text());\n});\ncy.get('.chart-label').then(function (child) {\n    cy.log(child.text());\n});\ncy.get('.chart-label > :nth-child(24)').scrollIntoView({ duration: 2000 });\ncy.get('app-baseline.ng-star-inserted > :nth-child(1) > .sub-navigation > .table-tabs > .row > .col > .nav-horizontal-scroll > .nav-horizontal-scroll-inner > :nth-child(2) > .nav-link')\n    .should('be.visible')\n    .click();\ncy.get('#calculation-method-dropdown').select('WSA');\ncy.get('.sub-navigation-inner > .sub-navigation > .table-tabs > .row > .col > .nav-horizontal-scroll > .nav-horizontal-scroll-inner > :nth-child(2) > .nav-link')\n    .should('be.visible')\n    .click();\ncy.get('.card-body').should('be.visible');\ncy.get('.nav-horizontal-scroll-inner > :nth-child(3) > .nav-link')\n    .should('be.visible')\n    .click();\ncy.get('.row > :nth-child(1) > .display-flex > :nth-child(1) > .sec-title').should('have.text', 'Supplier contribution');\ncy.get('.chart-side-color1 > :nth-child(1)').then(function (catagory) {\n    cy.log(catagory.text());\n});\ncy.get('.chart-side-color1 > :nth-child(2)').then(function (driver) {\n    cy.log(driver.text());\n});\ncy.get('.chart-side-color1 > :nth-child(3)').then(function (supplier) {\n    cy.log(supplier.text());\n});\ncy.get('.card-body > .row > :nth-child(2)').should('be.visible');\ncy.get('.card-body > .display-flex > :nth-child(1)').should('have.text', 'Supplier comparison(tCO2e)');\ncy.get('.select-no-theme.check.form-select').select('13');\ncy.get(\"select[class='select-no-theme form-select']\").select('351');\ncy.get('.sub-navigation-inner > .sub-navigation > .table-tabs > .row > .col > .nav-horizontal-scroll > .nav-horizontal-scroll-inner > :nth-child(2) > .nav-link')\n    .should('be.visible')\n    .click();\ncy.get(':nth-child(1) > .rounded-4 > .card-body > .box-flex-wrapper > .ps-0').select('S3. Waste & water generated from operations');\ncy.get(\"select[class='select-no-theme font-14 form-select']\").select('Natural Gas');\ncy.get('.highcharts-series-0>text')\n    .should('be.text', '3 Star Rating')\n    .click();\ncy.get('.highcharts-series-1>text')\n    .should('be.text', '2 Star Rating')\n    .click();\ncy.get('.highcharts-series-2>text')\n    .should('be.text', '1 Star Rating')\n    .click();\ncy.get(':nth-child(2) > .rounded-4 > .card-body > .sec-title').then(function (label) {\n    cy.log(label.text());\n});\ncy.get(':nth-child(2) > .rounded-4 > .card-body > .box-flex-wrapper > :nth-child(1)').each((option) => {\n    cy.log(option.text());\n});\ncy.get(':nth-child(2) > .rounded-4 > .card-body > .box-flex-wrapper > :nth-child(1)').select(' S3. Upstream Transportation and Distribution');\ncy.get(':nth-child(2) > .rounded-4 > .card-body > .box-flex-wrapper > :nth-child(2)').select('Natural Gas');\ncy.get('.box-flex-wrapper > :nth-child(3)').select('OCCL');\ncy.get('.sub-navigation-inner > .sub-navigation > .table-tabs > .row > .col > .nav-horizontal-scroll > .nav-horizontal-scroll-inner > :nth-child(3) > .nav-link')\n    .should('be.visible')\n    .click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 8000ms: Expected to find element: `#toast-container > .ng-trigger`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 8000ms: Expected to find element: `#toast-container > .ng-trigger`, but never found it.\n    at Context.eval (webpack://angular-centraworld-calcus/./cypress/e2e/new/Monitor_Baseline.cy.ts:25:0)",
+                "diff": null
+              },
+              "uuid": "b37494f0-ea71-4ce3-a339-076132d04c59",
+              "parentUUID": "0247491e-4c7c-40f9-9a70-445688018d48",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b37494f0-ea71-4ce3-a339-076132d04c59"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 43875,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

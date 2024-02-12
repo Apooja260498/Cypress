@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-01-15T10:13:50.569Z",
+    "end": "2024-01-15T10:14:54.517Z",
+    "duration": 63948,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "17c7c407-d9a1-4e09-afbe-342cfb0b9278",
+      "title": "",
+      "fullFile": "cypress\\e2e\\frameworkdemo\\monitor-netzerojourney.cy.ts",
+      "file": "cypress\\e2e\\frameworkdemo\\monitor-netzerojourney.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f3528dd8-7be4-4dfa-b346-c7fca8760301",
+          "title": "monitorNetzeroJourney",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logintest",
+              "fullTitle": "monitorNetzeroJourney logintest",
+              "timedOut": null,
+              "duration": 63874,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\frameworkdemo\\\\monitor-netzerojourney.cy.ts\\\\monitorNetzeroJourney -- logintest (failed).png\"\n    ]\n  ]\n}",
+              "code": "cy.fixture('URL').then(function (data) {\n    cy.visit(data.url);\n    var ln = new _Locator_cy__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\n    ln.setLoginPage(data.username, data.invalidPassword);\n    cy.get(data.NetzerojourneyUrl).should('be.exist').click();\n    cy.get('div.nav-horizontal-scroll').should('contain', 'Pathways');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 8000ms: expected '<div.ng-tns-c3817212877-2.ng-star-inserted.ng-trigger.ng-trigger-flyInOut.ngx-toastr.toast-error>' to have text ' login ', but the text was ' You have enter incorrect username and password. '",
+                "estack": "AssertionError: Timed out retrying after 8000ms: expected '<div.ng-tns-c3817212877-2.ng-star-inserted.ng-trigger.ng-trigger-flyInOut.ngx-toastr.toast-error>' to have text ' login ', but the text was ' You have enter incorrect username and password. '\n    at login.setLoginPage (webpack://angular-centraworld-calcus/./cypress/e2e/frameworkdemo/Locator.cy.ts:6:0)\n    at Context.eval (webpack://angular-centraworld-calcus/./cypress/e2e/frameworkdemo/monitor-netzerojourney.cy.ts:8:0)",
+                "diff": "- ' You have enter incorrect username and password. '\n+ ' login '\n"
+              },
+              "uuid": "0a65250c-526e-46ed-878d-12756e92363a",
+              "parentUUID": "f3528dd8-7be4-4dfa-b346-c7fca8760301",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "0a65250c-526e-46ed-878d-12756e92363a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 63874,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

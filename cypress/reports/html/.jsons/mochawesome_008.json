@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-01-15T10:17:29.882Z",
+    "end": "2024-01-15T10:23:07.045Z",
+    "duration": 337163,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "92360bc5-ad36-448d-8bc0-f344fe037f56",
+      "title": "",
+      "fullFile": "cypress\\e2e\\new\\Monitor_Netzerojourney.cy.ts",
+      "file": "cypress\\e2e\\new\\Monitor_Netzerojourney.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "007ef6b1-deac-4a68-825f-d4906fe2dca5",
+          "title": "centraworld_calcus",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login",
+              "fullTitle": "centraworld_calcus login",
+              "timedOut": null,
+              "duration": 336268,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://tabreed.sentra.world/');\nconst Username = 'vikas.upadhyay@sentra.world';\nconst Password = 'SentraWorld@2023';\ncy.get('input[placeholder=\"Username\"]').type('vikas.upadhyay@sentra.world');\ncy.get('input[placeholder=\"Password\"]').type('SentraWorld@2023');\ncy.get('.open-model > p > :nth-child(2)').should('be.visible').click();\ncy.get(':nth-child(64)').scrollIntoView({ duration: 2000 });\ncy.wait(2000);\ncy.get('#scrollableLongContentModal > .modal-dialog > .modal-content > [style=\"display: contents;\"] > .model-header > .btn').click();\ncy.get('.open-model > p > :nth-child(1)').should('be.visible').click();\ncy.get('#scrollableLongContentModalp > .modal-dialog > .modal-content > [style=\"display: contents;\"] > .model-body > .policy-font > :nth-child(50)').scrollIntoView({ duration: 2000 });\ncy.wait(2000);\ncy.get('#scrollableLongContentModalp > .modal-dialog > .modal-content > [style=\"display: contents;\"] > .model-header > .btn').click();\ncy.get('.px-4 > .ng-star-inserted').click();\nif (Username === 'vikas.upadhyay@sentra.world' &&\n    Password === 'SentraWorld@2023') {\n    cy.wait(6000);\n    cy.get('#toast-container > .ng-trigger').click();\n    cy.get('#toast-container > .ng-trigger').then(function (Login) {\n        cy.log(Login.text());\n    });\n}\nelse {\n    cy.wait(4000);\n    cy.get('#toast-container > .ng-trigger').then(function (Unauthorized) {\n        cy.log(Unauthorized.text());\n    });\n}\ncy.get('[href=\"#/calculus/monitor/net-zero-motivation\"]')\n    .should('be.visible')\n    .click();\ncy.get('app-net-zero-journey.ng-star-inserted > :nth-child(1) > .sub-navigation > .table-tabs > .row > .col > .nav-horizontal-scroll > .nav-horizontal-scroll-inner > :nth-child(1) > .nav-link')\n    .should('be.visible')\n    .click();\ncy.get('.sub-navigation-inner > .sub-navigation > .table-tabs > .row > .col > .nav-horizontal-scroll > .nav-horizontal-scroll-inner > :nth-child(1) > .nav-link').then(function (name) {\n    cy.log(name.text());\n});\ncy.get('.sub-navigation-inner c-nav-item').then(function (sites) {\n    cy.log(sites.text());\n});\ncy.get(\"app-sub-navigation[class='sub-navigation-inner'] a[class='nav-link']\").each(($element) => {\n    cy.wrap($element).click({ multiple: true });\n    cy.get('.mb-4 > .card-body > .ng-star-inserted > .sec-title').should('be.visible');\n    cy.get(':nth-child(2) > .card-body > .ng-star-inserted > .sec-title').should('be.visible');\n});\ncy.get('.highcharts-series-0>text').then(function (emission_pathways) {\n    cy.log(emission_pathways.text());\n});\ncy.get('.highcharts-series-1>text').then(function (emission_pathways1) {\n    cy.log(emission_pathways1.text());\n});\ncy.get('.highcharts-series-2>text').then(function (emission_pathways2) {\n    cy.log(emission_pathways2.text());\n});\ncy.get('.mb-4 > .card-body').should('be.visible');\ncy.get(':nth-child(2) > .card-body > .ng-star-inserted > .sec-title').should('contains.text', 'Decarbonisation projects planned');\ncy.get(':nth-child(2) > .card-body > .ng-star-inserted > .text-cardet-blue').then(function (decarbonisation) {\n    cy.log(decarbonisation.text());\n});\ncy.get('app-net-zero-journey.ng-star-inserted > :nth-child(1) > .sub-navigation > .table-tabs > .row > .col > .nav-horizontal-scroll > .nav-horizontal-scroll-inner > :nth-child(2) > .nav-link')\n    .should('be.visible')\n    .click();\nif (cy\n    .get('.sub-navigation-inner > .sub-navigation > .table-tabs > .row > .col > .nav-horizontal-scroll > .nav-horizontal-scroll-inner > :nth-child(1) > .nav-link')\n    .should('be.visible')\n    .click()) {\n    cy.get(':nth-child(1) > .project-card').then(function (TotalPotential) {\n        cy.log(TotalPotential.text());\n    });\n    cy.get(':nth-child(2) > .project-card').then(function (TotalProject) {\n        cy.log(TotalProject.text());\n    });\n    cy.get(':nth-child(3) > .project-card').then(function (OnTrack) {\n        cy.log(OnTrack.text());\n    });\n    cy.get(':nth-child(4) > .project-card').then(function (AtRisk) {\n        cy.log(AtRisk.text());\n    });\n    cy.get(':nth-child(5) > .project-card').then(function (Delayed) {\n        cy.log(Delayed.text());\n    });\n    cy.get(':nth-child(6) > .project-card').then(function (Notstarted) {\n        cy.log(Notstarted.text());\n    });\n    cy.get('.card-body > .sec-title').should('be.visible');\n}\ncy.get(\"app-sub-navigation[class='sub-navigation-inner'] a[class='nav-link']\").each(function ($el, index, $listofElements) {\n    cy.wrap($el).click({ force: true });\n    cy.get(':nth-child(1) > .project-card').then(function (total_potential) {\n        cy.log(total_potential.text());\n    });\n    cy.get(':nth-child(2) > .project-card').then(function (total_project) {\n        cy.log(total_project.text());\n    });\n    cy.get(':nth-child(3) > .project-card').then(function (on_track) {\n        cy.log(on_track.text());\n    });\n    cy.get(':nth-child(4) > .project-card').then(function (At_risk) {\n        cy.log(At_risk.text());\n    });\n    cy.get(':nth-child(5) > .project-card').then(function (delayed) {\n        cy.log(delayed.text());\n    });\n    cy.get(':nth-child(6) > .project-card').then(function (Not_started) {\n        cy.log(Not_started.text());\n    });\n    cy.get('.card-body > .sec-title').should('be.visible');\n});",
+              "err": {},
+              "uuid": "ee63f66e-4646-4a19-9660-251533eb407d",
+              "parentUUID": "007ef6b1-deac-4a68-825f-d4906fe2dca5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ee63f66e-4646-4a19-9660-251533eb407d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 336268,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
