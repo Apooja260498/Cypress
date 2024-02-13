@@ -1,6 +1,6 @@
 {
   "extends": "../tsconfig.json",
-  "include": ["**/*.ts", "e2e/calcus.cy.js"],
+  "include": ["**/*.ts", "e2e/calcus.cy.js", "JavascriptLearn/array.js"],
   "compilerOptions": {
     "sourceMap": false,
     "types": ["cypress"]
